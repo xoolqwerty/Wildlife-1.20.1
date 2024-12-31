@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "wildlife",
+	"version": "${version}",
+	"name": "Wildlife",
+	"description": "A mod with an assortment of wild creatures.",
+	"authors": [
+		"Randomizater + Illfiliated"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/wildlife/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.random.wildlife.Wildlife"
+		],
+		"client": [
+			"net.random.wildlife.WildlifeClient"
+		],
+		"fabric-datagen": [
+			"net.random.wildlife.WildlifeDataGenerator"
+		]
+	},
+	"mixins": [
+		"wildlife.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air",
+          "weight": 95,
+          "functions": []
+        },
+        {
+          "type": "minecraft:item",
+          "name": "wildlife:butterfly_wing",
+          "weight": 5,
+          "functions": []
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "wildlife:entities/butterfly"
+}

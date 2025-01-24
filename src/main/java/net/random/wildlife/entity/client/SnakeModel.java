@@ -4,69 +4,81 @@ import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
+import net.random.wildlife.entity.animation.ModAnimations;
 import net.random.wildlife.entity.custom.SnakeEntity;
+
+import javax.swing.text.html.parser.Entity;
 
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
 public class SnakeModel<T extends SnakeEntity> extends SinglePartEntityModel<T> {
-	private final ModelPart snake;
+	private final ModelPart Snake;
 	private final ModelPart head;
+
 	public SnakeModel(ModelPart root) {
-		this.snake = root.getChild("snake");
-		this.head = snake.getChild("head");
+		this.Snake = root.getChild("Snake");
+		this.head = Snake.getChild("head");
+
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
-		ModelPartData snake = modelPartData.addChild("snake", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, -5.0F));
+		ModelPartData Snake = modelPartData.addChild("Snake", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
 
-		ModelPartData head = snake.addChild("head", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 9.0F));
+		ModelPartData bone2 = Snake.addChild("bone2", ModelPartBuilder.create().uv(10, 0).cuboid(-1.0F, -1.0F, -2.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, -8.0F));
 
-		ModelPartData cube_r1 = head.addChild("cube_r1", ModelPartBuilder.create().uv(0, 0).cuboid(-3.0F, -2.0F, -1.0F, 4.0F, 2.0F, 4.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, 0.0F, -11.0F, 0.0F, 0.0F, 0.0F));
+		ModelPartData bone3 = Snake.addChild("bone3", ModelPartBuilder.create().uv(0, 8).cuboid(-1.0F, -1.0F, -2.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, -6.0F));
 
-		ModelPartData part5 = snake.addChild("part5", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+		ModelPartData bone4 = Snake.addChild("bone4", ModelPartBuilder.create().uv(8, 8).cuboid(-1.0F, -1.0F, -2.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, -4.0F));
 
-		ModelPartData cube_r2 = part5.addChild("cube_r2", ModelPartBuilder.create().uv(0, 12).cuboid(-1.0F, -1.0F, -1.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 2.0F, 0.0F, 0.0F, 0.0F));
+		ModelPartData bone5 = Snake.addChild("bone5", ModelPartBuilder.create().uv(10, 3).cuboid(-1.0F, -1.0F, -2.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, -2.0F));
 
-		ModelPartData part4 = snake.addChild("part4", ModelPartBuilder.create(), ModelTransform.pivot(-1.0F, 0.0F, 4.0F));
+		ModelPartData bone6 = Snake.addChild("bone6", ModelPartBuilder.create().uv(0, 11).cuboid(-1.0F, -1.0F, -2.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
-		ModelPartData cube_r3 = part4.addChild("cube_r3", ModelPartBuilder.create().uv(8, 9).cuboid(-1.0F, -1.0F, -1.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, 0.0F, 6.0F, 0.0F, 0.0F, 0.0F));
+		ModelPartData bone7 = Snake.addChild("bone7", ModelPartBuilder.create().uv(8, 11).cuboid(-1.0F, -1.0F, -2.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 2.0F));
 
-		ModelPartData part2 = snake.addChild("part2", ModelPartBuilder.create(), ModelTransform.pivot(1.0F, 0.0F, 6.0F));
+		ModelPartData bone8 = Snake.addChild("bone8", ModelPartBuilder.create().uv(0, 14).cuboid(-1.0F, -1.0F, -2.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 4.0F));
 
-		ModelPartData cube_r4 = part2.addChild("cube_r4", ModelPartBuilder.create().uv(8, 6).cuboid(-1.0F, -1.0F, -1.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-1.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F));
+		ModelPartData bone9 = Snake.addChild("bone9", ModelPartBuilder.create().uv(8, 14).cuboid(-1.0F, -1.0F, -2.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 6.0F));
 
-		ModelPartData part1 = snake.addChild("part1", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 8.0F));
+		ModelPartData bone10 = Snake.addChild("bone10", ModelPartBuilder.create().uv(16, 6).cuboid(-1.0F, -0.5F, -1.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -0.5F, 7.0F));
 
-		ModelPartData cube_r5 = part1.addChild("cube_r5", ModelPartBuilder.create().uv(0, 6).cuboid(-1.0F, -0.5F, -1.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(-1.0F, -0.5F, -4.0F, 0.0F, 0.0F, 0.0F));
+		ModelPartData head = Snake.addChild("head", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -1.0F, -10.0F));
 
-		ModelPartData part3 = snake.addChild("part3", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 5.0F));
+		ModelPartData bone11 = head.addChild("bone11", ModelPartBuilder.create().uv(0, 4).cuboid(-1.0F, 0.0F, -3.0F, 2.0F, 1.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
-		ModelPartData cube_r6 = part3.addChild("cube_r6", ModelPartBuilder.create().uv(0, 9).cuboid(-1.0F, -1.0F, -1.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, 0.0F, 3.0F, 0.0F, 0.0F, 0.0F));
-
-		ModelPartData tongue = snake.addChild("tongue", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -1.0F, 11.0F));
-
-		ModelPartData cube_r7 = tongue.addChild("cube_r7", ModelPartBuilder.create().uv(8, 12).cuboid(0.0F, 0.0F, 0.5F, 2.0F, 0.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, 0.0F, -14.0F, 0.0F, -1.5708F, 0.0F));
-
-		ModelPartData part6 = snake.addChild("part6", ModelPartBuilder.create().uv(0, 15).cuboid(-2.0F, -1.0F, 6.0F, 2.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 5.0F));
-		return TexturedModelData.of(modelData, 20, 20);
+		ModelPartData bone = head.addChild("bone", ModelPartBuilder.create().uv(0, 0).cuboid(-1.0F, -1.0F, -3.0F, 2.0F, 1.0F, 3.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.5F, 0.0F));
+		return TexturedModelData.of(modelData, 32, 32);
 	}
-	@Override
-	public void setAngles(SnakeEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
 
+
+	@Override
+	public void setAngles(SnakeEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.getPart().traverse().forEach(ModelPart::resetTransform);
+		this.setHeadAngles(netHeadYaw,headPitch);
+
+
+		this.animateMovement(ModAnimations.slithering, limbSwing, limbSwingAmount, 3f, 10f);
+		this.updateAnimation(entity.idleAnimationState, ModAnimations.idle, ageInTicks, 1f);
+
+	}
+
+	private void setHeadAngles(float headYaw, float headPitch){
+		headYaw = MathHelper.clamp(headYaw,-30.0f, 30.0f);
+		headPitch = MathHelper.clamp(headPitch, -25.0f, 45.0f);
+
+		this.head.yaw = headYaw * 0.017453292F;
+		this.head.pitch = headPitch * 0.017453292F;
 	}
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		snake.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+		Snake.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
 
 	@Override
 	public ModelPart getPart() {
-		return snake;
+		return Snake;
 	}
-
-
-
 }

@@ -1,0 +1,12 @@
+{
+  "snake_ambient": {
+    "subtitle": "sounds.wildlife.snake_ambient",
+    "sounds": [
+      "wildlife:snake_ambient",
+      "wildlife:snake_ambient2",
+      "wildlife:snake_ambient3",
+      "wildlife:snake_ambient4"
+    ]
+  }
+
+}

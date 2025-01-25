@@ -5,10 +5,12 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.random.wildlife.block.ModBlocks;
 import net.random.wildlife.entity.ModEntities;
+import net.random.wildlife.entity.custom.BearEntity;
 import net.random.wildlife.entity.custom.ButterflyEntity;
 import net.random.wildlife.entity.custom.SnakeEntity;
 import net.random.wildlife.item.ModItemGroups;
 import net.random.wildlife.item.ModItems;
+import net.random.wildlife.sound.ModSounds;
 import net.random.wildlife.util.ModLootTableModifiers;
 import net.random.wildlife.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
@@ -22,10 +24,13 @@ public class Wildlife implements ModInitializer {
 	public void onInitialize() {
 		FabricDefaultAttributeRegistry.register(ModEntities.SNAKE, SnakeEntity.createSnakeAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.BUTTERFLY, ButterflyEntity.createButterflyAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.BEAR, BearEntity.createBearAttributes());
 		ModWorldGeneration.generateModWorldGen();
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
 		ModLootTableModifiers.modifyLootTables();
 		ModBlocks.registerModBlocks();
+		ModEntities.registerModEntities();
+		ModSounds.registerSounds();
 	}
 }

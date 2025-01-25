@@ -13,6 +13,8 @@ public class WildlifeClient implements ClientModInitializer{
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.SNAKE, SnakeModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.BUTTERFLY, ButterflyRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BUTTERFLY, ButterflyModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.BEAR,BearRenderer::new);
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.BEAR, BearModel::getTexturedModelData);
 
 
     }

@@ -9,4 +9,7 @@ public class ModModelLayers {
             new EntityModelLayer(new Identifier(Wildlife.MOD_ID, "snake"),"main");
     public static final EntityModelLayer BUTTERFLY =
             new EntityModelLayer(new Identifier(Wildlife.MOD_ID,"butterfly"), "main" );
+    public static final EntityModelLayer BEAR =
+            new EntityModelLayer(new Identifier(Wildlife.MOD_ID,"bear"), "main" );
+
 }

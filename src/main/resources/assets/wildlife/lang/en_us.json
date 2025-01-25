@@ -1,6 +1,7 @@
 {
   "item.wildlife.snake_spawn_egg": "Snake Spawn Egg",
   "entity.wildlife.snake" : "Snake",
+  "sounds.wildlife.snake_ambient": "Snake hisses",
   "item.wildlife.snake_fang" : "Snake Fang",
   "item.wildlife.poison_dagger" : "Poison Dagger",
   "tooltip.wildlife.poison_dagger.tooltip": "Made from the rare tooth of a venomous snake,",
@@ -16,6 +17,8 @@
   "tooltip.wildlife.butterfly_elytra.tooltip": "Made from the delicate wing of a butterfly,",
   "tooltip.wildlife.butterfly_elytra.tooltip2": "this elytra is invisible to the naked eye and has less durability.",
 
+
+  "entity.wildlife.bear": "Bear",
   "block.wildlife.bear_carpet": "Bear Carpet",
 
 

@@ -2,11 +2,14 @@ package net.random.wildlife.item.custom;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Equipment;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
@@ -32,6 +35,7 @@ public class PoisonDaggerItem extends SwordItem{
         if(target instanceof LivingEntity){
             target.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON,150,1));
         }
+        stack.damage(1, attacker, e -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
         return true;
 
     }
@@ -40,6 +44,8 @@ public class PoisonDaggerItem extends SwordItem{
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable("tooltip.wildlife.poison_dagger.tooltip"));
         tooltip.add(Text.translatable("tooltip.wildlife.poison_dagger.tooltip2"));
+        tooltip.add(Text.translatable("tooltip.wildlife.poison_dagger.tooltip3"));
         super.appendTooltip(stack, world, tooltip, context);
     }
+
 }

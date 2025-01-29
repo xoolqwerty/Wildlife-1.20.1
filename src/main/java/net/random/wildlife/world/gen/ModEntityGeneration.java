@@ -24,12 +24,12 @@ public class ModEntityGeneration {
 
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS, BiomeKeys.MEADOW,
                         BiomeKeys.FOREST, BiomeKeys.DARK_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST, BiomeKeys.TAIGA, BiomeKeys.CHERRY_GROVE), SpawnGroup.CREATURE,
-                ModEntities.BUTTERFLY, 25, 5, 15);
+                ModEntities.BUTTERFLY, 50, 5, 15);
         SpawnRestriction.register(ModEntities.BUTTERFLY, SpawnRestriction.Location.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
 
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS, BiomeKeys.MEADOW,
                         BiomeKeys.FOREST, BiomeKeys.DARK_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST, BiomeKeys.TAIGA, BiomeKeys.CHERRY_GROVE),
-                SpawnGroup.CREATURE, ModEntities.BEAR, 25, 1, 1);
+                SpawnGroup.CREATURE, ModEntities.BEAR, 20, 1, 1);
         SpawnRestriction.register(ModEntities.BEAR,SpawnRestriction.Location.ON_GROUND,Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,AnimalEntity::isValidNaturalSpawn);
     }
 

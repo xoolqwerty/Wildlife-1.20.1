@@ -5,7 +5,7 @@ import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
 public class ModAnimations {
-        public static final Animation slithering = Animation.Builder.create(1.0F).looping()
+        public static final Animation Snake_Slithering = Animation.Builder.create(1.0F).looping()
                 .addBoneAnimation("Snake", new Transformation(Transformation.Targets.TRANSLATE,
                         new Keyframe(0.0F, AnimationHelper.createTranslationalVector(0.0F, 0.0F, 4.0F), Transformation.Interpolations.LINEAR)
                 ))
@@ -129,7 +129,7 @@ public class ModAnimations {
                 ))
                 .build();
 
-        public static final Animation idle = Animation.Builder.create(2.0F).looping()
+        public static final Animation Snake_Idle = Animation.Builder.create(2.0F).looping()
                 .addBoneAnimation("Snake", new Transformation(Transformation.Targets.TRANSLATE,
                         new Keyframe(0.0F, AnimationHelper.createTranslationalVector(0.0F, 0.0F, 4.0F), Transformation.Interpolations.LINEAR)
                 ))
@@ -211,7 +211,7 @@ public class ModAnimations {
                 ))
                 .build();
 
-        public static final Animation Flying = Animation.Builder.create(0.5F).looping()
+        public static final Animation Butterfly_Flying = Animation.Builder.create(0.5F).looping()
                 .addBoneAnimation("butterfly", new Transformation(Transformation.Targets.ROTATE,
                         new Keyframe(0.0F, AnimationHelper.createRotationalVector(90.0F, 0.0F, -180.0F), Transformation.Interpolations.CUBIC),
                         new Keyframe(0.5F, AnimationHelper.createRotationalVector(90.0F, 0.0F, -180.0F), Transformation.Interpolations.CUBIC)
@@ -233,7 +233,7 @@ public class ModAnimations {
                 ))
                 .build();
 
-        public static final Animation Hover = Animation.Builder.create(0.5F).looping()
+        public static final Animation Butterfly_Hover = Animation.Builder.create(0.5F).looping()
                 .addBoneAnimation("butterfly", new Transformation(Transformation.Targets.ROTATE,
                         new Keyframe(0.0F, AnimationHelper.createRotationalVector(90.0F, 0.0F, -180.0F), Transformation.Interpolations.CUBIC),
                         new Keyframe(0.5F, AnimationHelper.createRotationalVector(90.0F, 0.0F, -180.0F), Transformation.Interpolations.CUBIC)
@@ -252,6 +252,45 @@ public class ModAnimations {
                         new Keyframe(0.0F, AnimationHelper.createRotationalVector(0.0F, 40.0F, 0.0F), Transformation.Interpolations.CUBIC),
                         new Keyframe(0.25F, AnimationHelper.createRotationalVector(0.0F, -70.0F, 0.0F), Transformation.Interpolations.CUBIC),
                         new Keyframe(0.5F, AnimationHelper.createRotationalVector(0.0F, 40.0F, 0.0F), Transformation.Interpolations.CUBIC)
+                ))
+                .build();
+        public static final Animation Bear_Walking = Animation.Builder.create(1.0F).looping()
+                .addBoneAnimation("leg1", new Transformation(Transformation.Targets.ROTATE,
+                        new Keyframe(0.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.25F, AnimationHelper.createRotationalVector(-25.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.5F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.75F, AnimationHelper.createRotationalVector(25.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(1.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(2.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC)
+                ))
+                .addBoneAnimation("leg2", new Transformation(Transformation.Targets.ROTATE,
+                        new Keyframe(0.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.25F, AnimationHelper.createRotationalVector(25.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.5F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.75F, AnimationHelper.createRotationalVector(-25.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(1.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC)
+                ))
+                .addBoneAnimation("leg3", new Transformation(Transformation.Targets.ROTATE,
+                        new Keyframe(0.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.25F, AnimationHelper.createRotationalVector(-25.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.5F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.75F, AnimationHelper.createRotationalVector(25.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(1.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC)
+                ))
+                .addBoneAnimation("leg4", new Transformation(Transformation.Targets.ROTATE,
+                        new Keyframe(0.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.25F, AnimationHelper.createRotationalVector(25.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.5F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(0.75F, AnimationHelper.createRotationalVector(-25.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(1.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.CUBIC)
+                ))
+                .build();
+
+        public static final Animation Bear_Idle = Animation.Builder.create(5.0F).looping()
+                .addBoneAnimation("body", new Transformation(Transformation.Targets.SCALE,
+                        new Keyframe(0.0F, AnimationHelper.createScalingVector(1.0F, 1.0F, 1.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(2.5F, AnimationHelper.createScalingVector(1.05F, 1.05F, 1.0F), Transformation.Interpolations.CUBIC),
+                        new Keyframe(5.0F, AnimationHelper.createScalingVector(1.0F, 1.0F, 1.0F), Transformation.Interpolations.CUBIC)
                 ))
                 .build();
     }

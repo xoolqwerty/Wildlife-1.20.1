@@ -55,8 +55,8 @@ public class ButterflyModel<T extends ButterflyEntity> extends SinglePartEntityM
 		this.setHeadAngles(netHeadYaw,headPitch);
 
 
-		this.animateMovement(ModAnimations.Flying, limbSwing, limbSwingAmount, 2f, 2.5f);
-		this.updateAnimation(entity.idleAnimationState2, ModAnimations.Hover, ageInTicks, 1f);
+		this.animateMovement(ModAnimations.Butterfly_Flying, limbSwing, limbSwingAmount, 2f, 2.5f);
+		this.updateAnimation(entity.idleAnimationState2, ModAnimations.Butterfly_Hover, ageInTicks, 1f);
 
 
 	}

@@ -12,7 +12,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.BEAR_CARPET);
+        addDrop(ModBlocks.FUR_CARPET);
 
 
 

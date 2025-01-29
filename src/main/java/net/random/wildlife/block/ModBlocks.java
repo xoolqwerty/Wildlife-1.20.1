@@ -14,7 +14,7 @@ import net.random.wildlife.block.custom.BearCarpetBlock;
 
 public class ModBlocks {
 
-    public static final Block BEAR_CARPET = registerBlock("bear_carpet",new BearCarpetBlock(AbstractBlock.Settings.create().strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable()));
+    public static final Block FUR_CARPET = registerBlock("fur_carpet",new BearCarpetBlock(AbstractBlock.Settings.create().strength(0.1F).sounds(BlockSoundGroup.WOOL).burnable()));
 
     private static Block registerBlock(String name,Block block){
         registerBlockItem(name,block);

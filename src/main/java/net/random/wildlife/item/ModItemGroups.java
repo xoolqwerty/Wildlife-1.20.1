@@ -14,14 +14,16 @@ public class ModItemGroups {
     public static final ItemGroup ANIMAL_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Wildlife.MOD_ID,"animals"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.animals"))
-                    .icon(() -> new ItemStack(ModItems.SNAKE_SPAWN_EGG)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.FUR)).entries((displayContext, entries) -> {
                         entries.add(ModItems.SNAKE_SPAWN_EGG);
                         entries.add(ModItems.BUTTERFLY_SPAWN_EGG);
                         entries.add(ModItems.SNAKE_FANG);
                         entries.add(ModItems.BUTTERFLY_WING);
                         entries.add(ModItems.POISON_DAGGER);
                         entries.add(ModItems.BUTTERFLY_ELYTRA);
-                        entries.add(ModBlocks.BEAR_CARPET);
+                        entries.add(ModItems.BEAR_SPAWN_EGG);
+                        entries.add(ModBlocks.FUR_CARPET);
+                        entries.add(ModItems.FUR);
 
                     }).build());
     public static void registerItemGroups(){

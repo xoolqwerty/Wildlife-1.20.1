@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "wildlife:fur",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 10,
+                "min": 0
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "wildlife:entities/bear"
+}

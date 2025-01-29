@@ -17,7 +17,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.WOOL_CARPETS)
-                .add(ModBlocks.BEAR_CARPET);
+                .add(ModBlocks.FUR_CARPET);
+
 
 
     }

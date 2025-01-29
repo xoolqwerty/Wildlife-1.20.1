@@ -60,8 +60,8 @@ public class SnakeModel<T extends SnakeEntity> extends SinglePartEntityModel<T> 
 		this.setHeadAngles(netHeadYaw,headPitch);
 
 
-		this.animateMovement(ModAnimations.slithering, limbSwing, limbSwingAmount, 3f, 10f);
-		this.updateAnimation(entity.idleAnimationState, ModAnimations.idle, ageInTicks, 1f);
+		this.animateMovement(ModAnimations.Snake_Slithering, limbSwing, limbSwingAmount, 3f, 10f);
+		this.updateAnimation(entity.idleAnimationState, ModAnimations.Snake_Idle, ageInTicks, 1f);
 
 	}
 

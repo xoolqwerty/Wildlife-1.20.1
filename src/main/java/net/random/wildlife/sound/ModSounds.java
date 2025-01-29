@@ -8,7 +8,6 @@ import net.minecraft.registry.Registry;
 
 public class ModSounds {
     public static final SoundEvent SNAKE_AMBIENT = registerSoundEvent("snake_ambient");
-    public static final SoundEvent SNAKE_HURT = registerSoundEvent("snake_hurt");
 
 
     private static SoundEvent registerSoundEvent(String name){

@@ -7,6 +7,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
+import net.random.wildlife.block.ModBlocks;
 import net.random.wildlife.item.ModItems;
 
 import java.util.function.Consumer;
@@ -32,6 +33,12 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S', ModItems.BUTTERFLY_WING)
                 .criterion(hasItem(ModItems.BUTTERFLY_WING), conditionsFromItem(ModItems.BUTTERFLY_WING))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.BUTTERFLY_ELYTRA)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.FUR_CARPET,1)
+                .pattern("SS")
+                .input('S',ModItems.FUR)
+                .criterion(hasItem(ModItems.FUR),conditionsFromItem(ModItems.FUR))
+                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.FUR_CARPET)));
 
 
 

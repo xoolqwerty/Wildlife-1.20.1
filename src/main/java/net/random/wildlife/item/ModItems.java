@@ -35,6 +35,8 @@ public class ModItems {
     public static final Item BEAR_SPAWN_EGG = registerItem("bear_spawn_egg",new SpawnEggItem(ModEntities.BEAR, 0x452a10,0x2e1c03,new FabricItemSettings()));
     public static final Item FUR = registerItem("fur",new Item(new FabricItemSettings()));
 
+    public static final Item GIRAFFE_SPAWN_EGG = registerItem("giraffe_spawn_egg",new SpawnEggItem(ModEntities.GIRAFFE,0x954435,0xddbe69,new FabricItemSettings()));
+
 
 
 }

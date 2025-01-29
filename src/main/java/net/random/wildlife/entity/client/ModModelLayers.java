@@ -11,5 +11,7 @@ public class ModModelLayers {
             new EntityModelLayer(new Identifier(Wildlife.MOD_ID,"butterfly"), "main" );
     public static final EntityModelLayer BEAR =
             new EntityModelLayer(new Identifier(Wildlife.MOD_ID,"bear"), "main" );
+    public static final EntityModelLayer GIRAFFE =
+            new EntityModelLayer(new Identifier(Wildlife.MOD_ID,"giraffe"), "main" );
 
 }

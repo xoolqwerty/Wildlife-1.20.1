@@ -7,6 +7,7 @@ import net.random.wildlife.block.ModBlocks;
 import net.random.wildlife.entity.ModEntities;
 import net.random.wildlife.entity.custom.BearEntity;
 import net.random.wildlife.entity.custom.ButterflyEntity;
+import net.random.wildlife.entity.custom.GiraffeEntity;
 import net.random.wildlife.entity.custom.SnakeEntity;
 import net.random.wildlife.item.ModItemGroups;
 import net.random.wildlife.item.ModItems;
@@ -25,6 +26,7 @@ public class Wildlife implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.SNAKE, SnakeEntity.createSnakeAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.BUTTERFLY, ButterflyEntity.createButterflyAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.BEAR, BearEntity.createBearAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.GIRAFFE, GiraffeEntity.createGiraffeAttributes());
 		ModWorldGeneration.generateModWorldGen();
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();

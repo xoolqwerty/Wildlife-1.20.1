@@ -17,11 +17,12 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.FUR)).entries((displayContext, entries) -> {
                         entries.add(ModItems.SNAKE_SPAWN_EGG);
                         entries.add(ModItems.BUTTERFLY_SPAWN_EGG);
+                        entries.add(ModItems.BEAR_SPAWN_EGG);
+                        entries.add(ModItems.GIRAFFE_SPAWN_EGG);
                         entries.add(ModItems.SNAKE_FANG);
                         entries.add(ModItems.BUTTERFLY_WING);
                         entries.add(ModItems.POISON_DAGGER);
                         entries.add(ModItems.BUTTERFLY_ELYTRA);
-                        entries.add(ModItems.BEAR_SPAWN_EGG);
                         entries.add(ModBlocks.FUR_CARPET);
                         entries.add(ModItems.FUR);
 

@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import net.random.wildlife.Wildlife;
 import net.random.wildlife.entity.custom.BearEntity;
 import net.random.wildlife.entity.custom.ButterflyEntity;
+import net.random.wildlife.entity.custom.GiraffeEntity;
 import net.random.wildlife.entity.custom.SnakeEntity;
 
 public class ModEntities {
@@ -30,5 +31,10 @@ public class ModEntities {
                     Identifier(Wildlife.MOD_ID,"bear"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BearEntity::new)
                     .dimensions(EntityDimensions.fixed(1.4f,1.5f)).build());
+
+    public static final EntityType<GiraffeEntity> GIRAFFE = Registry.register(Registries.ENTITY_TYPE,new
+                    Identifier(Wildlife.MOD_ID,"giraffe"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, GiraffeEntity::new)
+                    .dimensions(EntityDimensions.fixed(2.2f,3f)).build());
 
 }

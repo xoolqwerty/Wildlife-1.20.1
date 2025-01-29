@@ -27,6 +27,9 @@
   "item.wildlife.fur": "Fur",
   "block.wildlife.bear_head": "Bear Head",
 
+  "entity.wildlife.giraffe": "Giraffe",
+  "item.wildlife.giraffe_spawn_egg": "Giraffe Spawn Egg",
+
 
   "itemgroup.animals" : "Wildlife"
 

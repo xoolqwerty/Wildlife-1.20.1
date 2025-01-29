@@ -31,6 +31,10 @@ public class ModEntityGeneration {
                         BiomeKeys.FOREST, BiomeKeys.DARK_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST, BiomeKeys.TAIGA, BiomeKeys.CHERRY_GROVE),
                 SpawnGroup.CREATURE, ModEntities.BEAR, 20, 1, 1);
         SpawnRestriction.register(ModEntities.BEAR,SpawnRestriction.Location.ON_GROUND,Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,AnimalEntity::isValidNaturalSpawn);
+
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.SAVANNA, BiomeKeys.SAVANNA_PLATEAU, BiomeKeys.WINDSWEPT_SAVANNA),
+                SpawnGroup.CREATURE,ModEntities.GIRAFFE,20,3,7);
+        SpawnRestriction.register(ModEntities.GIRAFFE,SpawnRestriction.Location.ON_GROUND,Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,AnimalEntity::isValidNaturalSpawn);
     }
 
 }

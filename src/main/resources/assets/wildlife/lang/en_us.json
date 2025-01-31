@@ -29,6 +29,8 @@
 
   "entity.wildlife.giraffe": "Giraffe",
   "item.wildlife.giraffe_spawn_egg": "Giraffe Spawn Egg",
+  "item.wildlife.giraffe_tongue": "Giraffe Tongue",
+  "death.attack.trample": "%1$s was trampled by a Giraffe",
 
 
   "itemgroup.animals" : "Wildlife"

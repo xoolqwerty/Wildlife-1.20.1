@@ -25,6 +25,7 @@ public class ModItemGroups {
                         entries.add(ModItems.BUTTERFLY_ELYTRA);
                         entries.add(ModBlocks.FUR_CARPET);
                         entries.add(ModItems.FUR);
+                        entries.add(ModItems.GIRAFFE_TONGUE);
 
                     }).build());
     public static void registerItemGroups(){

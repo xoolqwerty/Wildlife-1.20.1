@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "wildlife:block/fur_carpet",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "wildlife:block/fur_carpet"
+    },
+    "facing=west": {
+      "model": "wildlife:block/fur_carpet",
+      "y":270
+    },
+    "facing=south": {
+      "model": "wildlife:block/fur_carpet",
+      "y": 180
+    }
+  }
+}

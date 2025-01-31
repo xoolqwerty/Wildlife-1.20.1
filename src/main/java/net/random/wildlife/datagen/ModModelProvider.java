@@ -36,5 +36,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.POISON_DAGGER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BUTTERFLY_ELYTRA, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FUR, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.GIRAFFE_TONGUE,Models.HANDHELD);
     }
 }

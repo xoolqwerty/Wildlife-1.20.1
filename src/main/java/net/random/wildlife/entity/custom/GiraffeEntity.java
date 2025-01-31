@@ -7,7 +7,6 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
@@ -15,6 +14,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 import net.random.wildlife.entity.ModEntities;
+import net.random.wildlife.entity.damage.ModDamageTypes;
 import org.jetbrains.annotations.Nullable;
 
 public class GiraffeEntity extends AnimalEntity {
@@ -31,6 +31,7 @@ public class GiraffeEntity extends AnimalEntity {
         }
 
     }
+
 
     public GiraffeEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -58,6 +59,15 @@ public class GiraffeEntity extends AnimalEntity {
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0));
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.add(5, new LookAroundGoal(this));
+    }
+
+    @Override
+    public void onPlayerCollision(PlayerEntity player) {
+        onPlayerCollision(player,getWorld());
+    }
+
+    public void onPlayerCollision(PlayerEntity player, World world) {
+        player.damage(ModDamageTypes.of(world,ModDamageTypes.TRAMPLE_DAMAGE),10.0f);
     }
 
     public static DefaultAttributeContainer.Builder createGiraffeAttributes(){

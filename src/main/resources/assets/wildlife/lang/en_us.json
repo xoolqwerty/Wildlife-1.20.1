@@ -31,6 +31,10 @@
   "item.wildlife.giraffe_spawn_egg": "Giraffe Spawn Egg",
   "item.wildlife.giraffe_tongue": "Giraffe Tongue",
   "death.attack.trample": "%1$s was trampled by a Giraffe",
+  "effect.minecraft.tongue": "Tongue",
+  "item.minecraft.potion.effect.tongue_potion": "Potion of Tongue",
+  "item.minecraft.splash_potion.effect.tongue_potion": "Splash Potion of Tongue",
+  "item.minecraft.lingering_potion.effect.tongue_potion": "Lingering Potion of Tongue",
 
 
   "itemgroup.animals" : "Wildlife"

@@ -12,6 +12,7 @@ import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.random.wildlife.entity.ModEntities;
 import net.random.wildlife.entity.damage.ModDamageTypes;
@@ -31,6 +32,7 @@ public class GiraffeEntity extends AnimalEntity {
         }
 
     }
+    private final float Speed = this.speed;
 
 
     public GiraffeEntity(EntityType<? extends AnimalEntity> entityType, World world) {
@@ -61,13 +63,16 @@ public class GiraffeEntity extends AnimalEntity {
         this.goalSelector.add(5, new LookAroundGoal(this));
     }
 
+
     @Override
     public void onPlayerCollision(PlayerEntity player) {
         onPlayerCollision(player,getWorld());
     }
 
     public void onPlayerCollision(PlayerEntity player, World world) {
-        player.damage(ModDamageTypes.of(world,ModDamageTypes.TRAMPLE_DAMAGE),10.0f);
+        if(Speed >= 0){
+            player.damage(ModDamageTypes.of(world,ModDamageTypes.TRAMPLE_DAMAGE),10.0f);
+        }
     }
 
     public static DefaultAttributeContainer.Builder createGiraffeAttributes(){
